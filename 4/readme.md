@@ -4,23 +4,24 @@ The code was made in MATLAB to count the number of blue rectangles (numA) and nu
 
 To initialize the code:
 
-Download the repository lego-searching
-Open initialize.m in MATLAB and select which training image to process, i.e. train__.jpg
-Run the script
-PROCEDURE:
+1. Download the repository lego-searching
+2. Open initialize.m in MATLAB and select which training image to process, i.e. train__.jpg
+3. Run the script
 
-Download image as I=imread('filename') and invoke lego_count(I) function
-Use K-Means Clustering to segment the image into different colors
-Determine which clusters contain blue and red colors
-Select blue and red clusters containing the most number of blue and red elements, respectively
-Edge detection using Canny edge detector for red and blue colors
-Dilation of objects and filling holes
-Apply watershed method to separate touching objects and determine boundaries of objects
-Compute properties of each identified object (areas, perimeters, etc.)
-Classify each object as square/rectangle/circle/triangle
-If a blue object is rectangular or red object is square, then we can judge whether an object is blue rectangle or red square based on their perimeters and area properties
-Count the objects that fall under those categories
-REFERENCES:
+### PROCEDURE:
+
+1. Download image as I=imread('filename') and invoke lego_count(I) function
+2. Use K-Means Clustering to segment the image into different colors
+3. Determine which clusters contain blue and red colors
+4. Select blue and red clusters containing the most number of blue and red elements, respectively
+5. Edge detection using Canny edge detector for red and blue colors
+6. Dilation of objects and filling holes
+7. Apply watershed method to separate touching objects and determine boundaries of objects
+8. Compute properties of each identified object (areas, perimeters, etc.)
+9. Classify each object as square/rectangle/circle/triangle
+10. If a blue object is rectangular or red object is square, then we can judge whether an object is blue rectangle or red square based on their perimeters and area properties
+11. Count the objects that fall under those categories
+### REFERENCES:
 
 Title: Matlab: Color-Based Segmentation Author: user2916044 Date: 5 September 2014 Availability: https://stackoverflow.com/questions/25691735/matlab-color-based-segmentation
 
